@@ -8,7 +8,7 @@ const dotenv = require("dotenv");
 dotenv.config();
 
 const corsOptions = {
-  origin: "https://velvety-mooncake-379655.netlify.app/",
+  origin: "https://velvety-mooncake-379655.netlify.app",
   credentials: true, //access-control-allow-credentials:true
   optionSuccessStatus: 200,
 };
