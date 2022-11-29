@@ -1,6 +1,6 @@
 const express = require("express");
 const authRouter = require("./authRouter");
-const POST = process.env.POST || 5000;
+const POST = "https://abroranvarovtask4.herokuapp.com";
 const mongoose = require("mongoose");
 const app = express();
 const cors = require("cors");
