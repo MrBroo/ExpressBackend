@@ -1,6 +1,6 @@
 const express = require("express");
 const authRouter = require("./authRouter");
-const POST = "https://abroranvarovtask4.herokuapp.com";
+const port = process.env.POST || 5000;
 const mongoose = require("mongoose");
 const app = express();
 const cors = require("cors");
@@ -20,8 +20,8 @@ app.use("/auth", authRouter);
 const start = async () => {
   try {
     await mongoose.connect(process.env.MONGODB_URL);
-    app.listen(POST, () =>
-      console.log(`Server has been started on port ${POST}...`)
+    app.listen(port, () =>
+      console.log(`Server has been started on port ${port}...`)
     );
   } catch (e) {
     console.log("Server error", e.message);
